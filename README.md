@@ -52,3 +52,14 @@ public class AtivacaoClienteService {
 		return notificador;
 	}
 } 
+
+
+
+Log of the application bootstrap:
+
+Criado bean com.degrahl.adrianfoodapi.di.notificacao.NotificationEmail@38fdce85 para o notificador de Email
+constructor AtivacaoClienteService, notificador: com.degrahl.adrianfoodapi.di.notificacao.NotificationEmail@38fdce85
+Criado bean com.degrahl.adrianfoodapi.di.notificacao.NotificadorSMS@536c35d3 para o notificador de SMS
+
+log when called the "hello" endpoint
+notificador com.degrahl.adrianfoodapi.di.notificacao.NotificationEmail@38fdce85

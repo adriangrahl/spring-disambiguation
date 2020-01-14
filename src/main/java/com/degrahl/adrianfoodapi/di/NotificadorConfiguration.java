@@ -13,6 +13,8 @@ public class NotificadorConfiguration {
 
 	@Bean
 	@TipoDoNotificador(NivelUrgencia.URGENTE)
+	//@Qualifier("urgente")
+	//@Primary
 	public NotificadorSMS notificadorSMS() {
 		NotificadorSMS notificadorSMS = new NotificadorSMS();
 		System.out.println(String.format("Criado bean %s para o notificador de SMS", notificadorSMS.toString()));
@@ -21,6 +23,7 @@ public class NotificadorConfiguration {
 	
 	@Bean
 	@TipoDoNotificador(NivelUrgencia.NORMAL)
+	//@Qualifier("normal")
 	public NotificationEmail notificadorEmail() {
 		NotificationEmail notificadorEmail = new NotificationEmail();
 		System.out.println(String.format("Criado bean %s para o notificador de Email", notificadorEmail.toString()));

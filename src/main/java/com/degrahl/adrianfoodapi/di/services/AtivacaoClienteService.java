@@ -9,7 +9,11 @@ import com.degrahl.adrianfoodapi.di.notificacao.Notificador;
 @Component
 public class AtivacaoClienteService {
 
+	//@Autowired
+	//Qualifier("normal")
 	Notificador notificador;
+	
+	//List<Notificador> notificadores;
 
 	public AtivacaoClienteService(@TipoDoNotificador(NivelUrgencia.NORMAL) Notificador notificador) {
 		System.out.println(String.format("constructor AtivacaoClienteService, notificador: %s", notificador.toString()));
