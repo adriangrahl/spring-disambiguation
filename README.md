@@ -1,7 +1,10 @@
-This is the first version, here when executed the application will show the following error message:
+This is the second version, here we can see that is possible to solve the ambiguity by just injecting all candidates in a List.
 
-Parameter 0 of constructor in com.degrahl.adrianfoodapi.di.services.AtivacaoClienteService required a single bean, but 2 were found:
+We're now able to run the application. At first the following log will appear:
 
-This happens because we have 2 candidates to inject the bean Notificador (NotificadorEmail and NotificadorSMS)
+Criado bean com.degrahl.adrianfoodapi.di.notificacao.NotificadorSMS@1226e0e3 para o notificador de SMS
+Criado bean com.degrahl.adrianfoodapi.di.notificacao.NotificationEmail@f7148f9 para o notificador de Email
+constructor AtivacaoClienteService, notificadores: [com.degrahl.adrianfoodapi.di.notificacao.NotificadorSMS@1226e0e3, com.degrahl.adrianfoodapi.di.notificacao.NotificationEmail@f7148f9]
 
-In the other branches you will find alternatives as to define the right candidate.
+Also, we can make a GET request at the URL http://localhost:8080/hello and see:
+notificadores [com.degrahl.adrianfoodapi.di.notificacao.NotificadorSMS@1226e0e3, com.degrahl.adrianfoodapi.di.notificacao.NotificationEmail@f7148f9]
