@@ -1,3 +1,12 @@
+**Changelog**
+
+* other alteratives as comment (7619b)
+* fouth selection way - custom annotations using @qualifier (af205)
+* third selection way - @qualifier - adds flexibility in comparison with the previous approaches (4c1c2)
+* second selection way - @primary annotation - simple but not flexible (007ff)
+* fist selecion way - listing all candidates (7aa46)
+* First version, showing the ambiguity problem (42888)
+
 As the fourth version, we stop using directly the @Qualifier and create a custom annotation, 
 so that we add clarity and easy to maintenance (refacture backed by IDE)  
 
