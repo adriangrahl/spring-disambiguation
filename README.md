@@ -1,9 +1,22 @@
-This is the second version, here we can see that is possible to solve the ambiguity with @Primary at one of the candidates
+As the third version, the @Qualifier allows us to define a name for the bean, so that we can specify which is the right one at different situations
 
-Log of the application running
+One quirk of this approach is that we can put it as a parameter within the construction of a class. Ex:
 
-Criado bean com.degrahl.adrianfoodapi.di.notificacao.NotificadorSMS@6bfe76b2 para o notificador de SMS
-constructor AtivacaoClienteService, notificador: com.degrahl.adrianfoodapi.di.notificacao.NotificadorSMS@6bfe76b2
-Criado bean com.degrahl.adrianfoodapi.di.notificacao.NotificationEmail@22283ce6 para o notificador de Email
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 
-This is one of the quickest ways to solve the ambiguity, in the other hand does not provides flexibility
+public class Employee {
+    
+    private Company comp;
+    
+    private Employee(@Qualifier(value="beanId") Company comp) {
+        this.comp=comp;
+	}
+    
+    public Company getComp() {
+        return comp;
+    }
+}
+
+Current log of the "hello" endpoint:
+notificador com.degrahl.adrianfoodapi.di.notificacao.NotificationEmail@27719952
