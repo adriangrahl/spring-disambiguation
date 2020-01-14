@@ -1,7 +1,5 @@
 package com.degrahl.adrianfoodapi.di.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,9 +17,9 @@ public class HelloController {
 	@GetMapping("hello")
 	@ResponseBody
 	public String hello() {
-		List<Notificador> notificadores = service.getNotificadores();
+		Notificador notificador = service.getNotificador();
 		
-		System.out.println(String.format("notificadores %s",notificadores.toString()));
+		System.out.println(String.format("notificador %s",notificador.toString()));
 		return "Hello!";
 	}
 }
